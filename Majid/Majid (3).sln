@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\Majid\", "C:\Majid\", "{D6AC807F-06E6-4302-95A2-6D4D5306B54F}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/Majid"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Majid\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Majid\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Majid"
+		Release.AspNetCompiler.PhysicalPath = "C:\Majid\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Majid\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1036"
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/Majid"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Majid\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Majid\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Majid"
+		Release.AspNetCompiler.PhysicalPath = "C:\Majid\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Majid\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1036"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6AC807F-06E6-4302-95A2-6D4D5306B54F}.Debug|.NET.ActiveCfg = Debug|.NET
+		{D6AC807F-06E6-4302-95A2-6D4D5306B54F}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

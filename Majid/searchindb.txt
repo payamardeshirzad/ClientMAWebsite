@@ -1,0 +1,14 @@
+Boolean b = false;   
+           foreach (GridViewRow gr in GridView1.Rows)   
+           {   
+               if (gr.Cells[0].Text == TextBox1.Text)   
+               {   
+                   b = true;   
+                   Response.Write("Record found : " + gr.Cells[1].Text);   
+                   break;   
+               }   
+           }   
+           if (!b)   
+           {   
+               Response.Write("Record was not found...");   
+           } 

@@ -1,0 +1,103 @@
+    protected void Button1_Click(object sender, EventArgs e)//Insert
+    {
+        string conn="Data Source=.\\SQLEXPRESS;Initial Catalog=db3;Integrated Security=True";
+        SqlConnection sqlcon = new SqlConnection(conn);
+        sqlcon.Open();
+        SqlCommand insertcommand = new SqlCommand("insert into Table1 (c1,c2,c3) values ('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')");
+        insertcommand.Connection = sqlcon;
+        insertcommand.CommandType = CommandType.Text;
+     int num=   insertcommand.ExecuteNonQuery();
+     this.Title = num.ToString();
+        sqlcon.Close();
+        GridView1.DataSourceID = "SqlDataSource1";
+        //  MyGridView.DataSource = GetData();
+        GridView1.DataBind();
+        
+    }
+    protected void Button2_Click(object sender, EventArgs e)//lete//De
+    {
+       /* string conn = "Data Source=.\\SQLEXPRESS;Initial Catalog=db3;Integrated Security=True";
+        SqlConnection sqlcon = new SqlConnection(conn);
+        sqlcon.Open();
+        SqlCommand searchcommand = new SqlCommand("Select * From Table1");// Where (c2='" + TextBox4.Text + "')
+        searchcommand.Connection = sqlcon;
+        searchcommand.CommandType = CommandType.Text;
+        int num = searchcommand.ExecuteNonQuery();
+       
+        sqlcon.Close();
+        this.Title = num.ToString();*/
+        string conn = "Data Source=.\\SQLEXPRESS;Initial Catalog=db3;Integrated Security=True";
+        SqlConnection sqlcon = new SqlConnection(conn);
+        sqlcon.Open();
+        SqlCommand insertcommand = new SqlCommand("Delete From Table1 where c1='"+TextBox4.Text+"'");
+        insertcommand.Connection = sqlcon;
+        insertcommand.CommandType = CommandType.Text;
+      //  SqlDataReader reader = insertcommand.ExecuteReader(CommandBehavior.SingleResult | CommandBehavior.CloseConnection);
+        int num = insertcommand.ExecuteNonQuery();
+        this.Title = num.ToString();
+        sqlcon.Close();
+        GridView1.DataSourceID = "SqlDataSource1";
+        //  MyGridView.DataSource = GetData();
+        GridView1.DataBind();
+        
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        GridView1.DataSourceID = "SqlDataSource1";
+        //  MyGridView.DataSource = GetData();
+        GridView1.DataBind();
+    }
+    protected void Button3_Click(object sender, EventArgs e)//Update
+    {
+        string conn = "Data Source=.\\SQLEXPRESS;Initial Catalog=db3;Integrated Security=True";
+        SqlConnection sqlcon = new SqlConnection(conn);
+        sqlcon.Open();
+        SqlCommand insertcommand = new SqlCommand("update Table1 SET c1='" + TextBox1.Text + "',c2='" + TextBox2.Text + "',c3='" + TextBox3.Text + "' where c1='"+TextBox5.Text+"'");
+        insertcommand.Connection = sqlcon;
+        insertcommand.CommandType = CommandType.Text;
+        int num = insertcommand.ExecuteNonQuery();
+        this.Title = num.ToString();
+        sqlcon.Close();
+        GridView1.DataSourceID = "SqlDataSource1";
+
+        GridView1.DataBind();
+    }
+    protected void Button4_Click(object sender, EventArgs e)//Search
+    {
+        string conn = "Data Source=.\\SQLEXPRESS;Initial Catalog=db3;Integrated Security=True";
+        SqlConnection sqlcon = new SqlConnection(conn);
+        sqlcon.Open();
+
+
+        Boolean b = false;
+        foreach (GridViewRow gr in GridView1.Rows)
+        {
+            if (gr.Cells[1].Text == TextBox1.Text)
+            {
+                
+                b = true;
+                this.Title = "found" + gr.Cells.Count.ToString();    //   Response.Write("Record found : " + gr.Cells[1].Text);
+                TextBox2.Text = gr.Cells[2].Text;
+                TextBox3.Text = gr.Cells[3].Text;
+                
+                
+                break;
+            }
+        }
+        if (!b)
+        {
+            this.Title = "not found";  //  Response.Write("Record was not found...");
+        } 
+
+
+      //  SqlCommand insertcommand = new SqlCommand("Select * From Table1 where c1='" + TextBox6.Text + "'");
+
+    //    insertcommand.Connection = sqlcon;
+  //      insertcommand.CommandType = CommandType.Text;
+       // int num = insertcommand.ExecuteNonQuery();
+        //this.Title = num.ToString();
+        sqlcon.Close();
+        GridView1.DataSourceID = "SqlDataSource1";
+
+        GridView1.DataBind();
+    }

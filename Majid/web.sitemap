@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+	<siteMapNode title="خانه" url="Default.aspx">
+    <siteMapNode title="مشاهده کل بانک" url="Details.aspx" />
+		<siteMapNode title="اضافه نمودن" url="Resume.aspx" />
+		<siteMapNode title="حذف از بانک" url="Links.aspx" />
+    <siteMapNode title="جستجو" url="Photos.aspx" />
+		<siteMapNode title="ایجاد تغییرات" url="Albums.aspx" >
+		</siteMapNode>
+		<siteMapNode title="ثبت نام" url="Register.aspx" />
+	</siteMapNode>
+</siteMap>
